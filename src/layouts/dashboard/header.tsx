@@ -39,7 +39,7 @@ export default function Header({ leftSlot }: HeaderProps) {
 					variant="ghost"
 					size="icon"
 					className="rounded-full"
-					onClick={() => window.open("https://github.com/d3george/slash-admin")}
+					onClick={() => window.open("https://github.com/donta/TurfTapPickem")}
 				>
 					<Icon icon="mdi:github" size={24} />
 				</Button>

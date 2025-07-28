@@ -9,8 +9,6 @@
     </p>
 </div>
 
-| | 
-
 ## Features
 
 - Built using React 19 hooks.

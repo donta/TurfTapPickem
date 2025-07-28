@@ -1,8 +1,8 @@
 import Cover3 from "@/assets/images/cover/cover_3.jpg";
 import MotionContainer from "@/components/animate/motion-container";
-import { getVariant } from "@/components/animate/variants";
+import { variantsHelper } from "@/components/animate/variants/types";
 import { themeVars } from "@/theme/theme.css";
-import { m } from "motion/react";
+import { motion } from "framer-motion";
 import { repeat } from "ramda";
 import { useMemo } from "react";
 
@@ -13,7 +13,7 @@ type Props = {
 	variant: string;
 };
 export default function ContainerView({ isText, variant, isMulti }: Props) {
-	const varients = useMemo(() => getVariant(variant), [variant]);
+	const variants = useMemo(() => variantsHelper(), []);
 	const imgs = useMemo(() => (isMulti ? repeat(Cover3, 5) : [Cover3]), [isMulti]);
 
 	return (
@@ -25,15 +25,15 @@ export default function ContainerView({ isText, variant, isMulti }: Props) {
 			{isText ? (
 				<MotionContainer className="flex h-[480px] items-center justify-center font-bold md:text-6xl">
 					{TEXT.split("").map((letter) => (
-						<m.div key={letter} variants={varients}>
+						<motion.div key={letter} variants={variants}>
 							{letter}
-						</m.div>
+						</motion.div>
 					))}
 				</MotionContainer>
 			) : (
 				<MotionContainer className="flex flex-col items-center justify-center gap-6">
 					{imgs.map((img) => (
-						<m.img
+						<motion.img
 							key={img}
 							src={img}
 							style={{
@@ -43,7 +43,7 @@ export default function ContainerView({ isText, variant, isMulti }: Props) {
 								margin: "auto",
 								borderRadius: "8px",
 							}}
-							variants={varients}
+							variants={variants}
 						/>
 					))}
 				</MotionContainer>

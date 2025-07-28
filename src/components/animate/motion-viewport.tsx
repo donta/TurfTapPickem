@@ -1,6 +1,6 @@
-import { type MotionProps, m } from "motion/react";
+import { type MotionProps, motion } from "framer-motion";
 
-import { varContainer } from "./variants";
+import { varContainer } from "./variants/container";
 
 interface Props extends MotionProps {
 	className?: string;
@@ -26,7 +26,7 @@ interface Props extends MotionProps {
  */
 export default function MotionViewport({ children, className, ...other }: Props) {
 	return (
-		<m.div
+		<motion.div
 			initial="initial"
 			whileInView="animate"
 			viewport={{ once: true, amount: 0.3 }}
@@ -35,6 +35,6 @@ export default function MotionViewport({ children, className, ...other }: Props)
 			{...other}
 		>
 			{children}
-		</m.div>
+		</motion.div>
 	);
 }

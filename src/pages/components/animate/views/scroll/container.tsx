@@ -1,5 +1,5 @@
 import MotionViewport from "@/components/animate/motion-viewport";
-import { getVariant } from "@/components/animate/variants";
+import { variantsHelper } from "@/components/animate/variants/types";
 import { themeVars } from "@/theme/theme.css";
 import { Card } from "@/ui/card";
 import { useMemo } from "react";
@@ -8,7 +8,7 @@ type Props = {
 	variant: string;
 };
 export default function ContainerView({ variant }: Props) {
-	const varients = useMemo(() => getVariant(variant), [variant]);
+	const variants = useMemo(() => variantsHelper(), []);
 
 	return (
 		<div
@@ -18,7 +18,7 @@ export default function ContainerView({ variant }: Props) {
 		>
 			{[...Array(40)].map((_, index) => (
 				// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-				<MotionViewport key={index} variants={varients} className="mt-4">
+				<MotionViewport key={index} variants={variants} className="mt-4">
 					<Card>
 						<span className="text-center">Item {index + 1}</span>
 					</Card>
