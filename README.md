@@ -2,37 +2,13 @@
 <br> 
 <br>
 <img src="./src/assets/icons/ic-logo-badge.svg" height="140" />
-<h3> Slash Admin </h3>
+<h3> Turf Tap Picken </h3>
   <p>
     <p style="font-size: 14px">
-      Slash Admin is a modern admin dashboard template built with React 19, Vite, shadcn/ui, and TypeScript. It is designed to help developers quickly create powerful admin management systems.
+      Turf Tap Pickem is a modern admin dashboard built with React 19, Vite, shadcn/ui, and TypeScript. It is designed to create a easy to setup and use NFL pickem league.
     </p>
-    <br />
-    <br />
-    <a href="https://admin.slashspaces.com/">Preview</a>
-    ·
-    <a href="https://discord.gg/fXemAXVNDa">Discord</a>
-    ·
-    <a href="https://docs-admin.slashspaces.com/">Document</a>
-    <br />
-    <br />
-    <a href="https://trendshift.io/repositories/6387" target="_blank"><img src="https://trendshift.io/api/badge/repositories/6387" alt="d3george%2Fslash-admin | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 </div>
 
-**English** | [中文](./README.zh-CN.md)
-
-##  Sponsor
-<div style="display: flex; gap: 50px"> 
-  <img style="width:300px" src="https://d3george.github.io/github-static/pay/weixin.jpg" >
-  <img style="width:300px" src="https://d3george.github.io/github-static/pay/buymeacoffee.png" />
-</div>
-
-## Preview
-+ https://admin.slashspaces.com/
-
-|![login.png](https://d3george.github.io/github-static/slash-admin/sa-web-light.jpeg)|![login_dark.png](https://d3george.github.io/github-static/slash-admin/sa-web-dark.jpeg)
-| ----------------------------------------------------------------- | ------------------------------------------------------------------- |
-|![analysis.png](https://d3george.github.io/github-static/slash-admin/sa-mobile-light.jpeg)|![workbench.png](https://d3george.github.io/github-static/slash-admin/sa-mobile-dark.jpeg)
 | | 
 
 ## Features
@@ -56,7 +32,7 @@
 ### Get the Project Code
 
 ```bash
-git clone https://github.com/d3george/slash-admin.git
+git clone https://github.com/donta/TurfTapPickem.git
 ```
 
 ### Install Dependencies
@@ -64,7 +40,7 @@ git clone https://github.com/d3george/slash-admin.git
 In the project's root directory, run the following command to install project dependencies:
 
 ```bash
-pnpm install
+npm install
 ```
 
 ### Start the Development Server
@@ -72,7 +48,7 @@ pnpm install
 Run the following command to start the development server:
 
 ```bash
-pnpm dev
+npm dev
 ```
 
 Visit [http://localhost:3001](http://localhost:3001) to view your application.
@@ -82,7 +58,7 @@ Visit [http://localhost:3001](http://localhost:3001) to view your application.
 Run the following command to build the production version:
 
 ```bash
-pnpm build
+npm build
 ```
 
 ## Git Contribution submission specification
