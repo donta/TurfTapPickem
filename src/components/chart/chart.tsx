@@ -12,20 +12,20 @@ export function Chart(props: ApexChartProps) {
 					...props.options,
 					chart: {
 						...props.options?.chart,
-						// 优化响应式性能
+						// Optimize responsive performance
 						animations: {
 							...props.options?.chart?.animations,
 							enabled: true,
-							speed: 200, // 减少动画时间
+							speed: 200, // Reduce animation time
 							animateGradually: {
-								enabled: false, // 禁用渐进动画
+								enabled: false, // Disable gradual animation
 							},
 							dynamicAnimation: {
 								enabled: true,
-								speed: 200, // 减少动态动画时间
+								speed: 200, // Reduce dynamic animation time
 							},
 						},
-						// 启用硬件加速
+						// Enable hardware acceleration
 						redrawOnParentResize: true,
 						redrawOnWindowResize: true,
 					},

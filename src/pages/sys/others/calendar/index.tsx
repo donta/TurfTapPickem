@@ -140,7 +140,7 @@ export default function Calendar() {
 		if (start) newEvent.start = start.toDate();
 		if (end) newEvent.end = end.toDate();
 
-		// 刷新日历显示
+		// Refresh calendar display
 		oldEvent?.remove();
 		calendarApi.addEvent(newEvent);
 	};
@@ -162,7 +162,7 @@ export default function Calendar() {
 		if (start) newEvent.start = start.toDate();
 		if (end) newEvent.end = end.toDate();
 
-		// 刷新日历显示
+		// Refresh calendar display
 		calendarApi.addEvent(newEvent);
 	};
 	// delete event

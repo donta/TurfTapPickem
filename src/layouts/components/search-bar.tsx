@@ -16,7 +16,7 @@ interface SearchItem {
 	path: string;
 }
 
-// 高亮文本组件
+// Highlight text component
 const HighlightText = ({ text, query }: { text: string; query: string }) => {
 	if (!query) return <>{text}</>;
 

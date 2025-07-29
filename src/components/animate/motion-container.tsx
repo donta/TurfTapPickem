@@ -6,39 +6,40 @@ interface Props extends MotionProps {
 }
 
 /**
- * MotionContainer - 动画容器组件
+ * MotionContainer - Animation Container Component
  *
- * 这是一个基于 Framer Motion 的通用动画容器组件，用于管理子组件的动画状态和过渡效果。
+ * This is a general-purpose animation container component based on Framer Motion,
+ * used to manage animation states and transition effects of child components.
  *
- * 主要功能：
- * 1. 提供统一的动画状态管理（initial、animate、exit）
- * 2. 支持子组件的级联动画效果
- * 3. 可自定义容器样式
+ * Main features:
+ * 1. Provides unified animation state management (initial, animate, exit)
+ * 2. Supports cascading animation effects for child components
+ * 3. Customizable container styles
  *
- * 动画变体（Variants）说明：
- * - initial: 初始状态
- * - animate: 动画状态
- * - exit: 退出状态
+ * Variants description:
+ * - initial: Initial state
+ * - animate: Animation state
+ * - exit: Exit state
  *
- * 子组件动画控制：
- * - 当父容器设置 variants 后，子组件可以继承这些动画属性
- * - 子组件可以通过 variants 属性指定自己的动画效果
- * - 支持多种预设动画效果：fade、slide、zoom、bounce、flip、scale、rotate 等
+ * Child component animation control:
+ * - When the parent container sets variants, child components can inherit these animation properties
+ * - Child components can specify their own animation effects through the variants property
+ * - Supports various preset animation effects: fade, slide, zoom, bounce, flip, scale, rotate, etc.
  *
- * 使用示例：
+  * Example:
  * ```tsx
  * <MotionContainer>
  *   <motion.div variants={varFade().in}>
  *     <h1>Animated Content</h1>
  *   </motion.div>
  * </MotionContainer>
- * ```
+```
  *
- * 自定义动画参数：
- * 可以通过 varContainer 函数传入以下参数来自定义动画效果：
- * - staggerIn: 子元素进入动画的延迟时间（默认：0.05s）
- * - delayIn: 整体进入动画的延迟时间（默认：0.05s）
- * - staggerOut: 子元素退出动画的延迟时间（默认：0.05s）
+ * Custom animation parameters:
+ * You can customize animation effects by passing the following parameters to the varContainer function:
+ * - staggerIn: Delay time for child element entry animations (default: 0.05s)
+ * - delayIn: Overall entry animation delay time (default: 0.05s)
+ * - staggerOut: Delay time for child element exit animations (default: 0.05s)
  */
 export default function MotionContainer({ children, className }: Props) {
 	return (

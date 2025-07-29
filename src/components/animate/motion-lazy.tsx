@@ -1,4 +1,4 @@
-import { LazyMotion, domMax, m } from "motion/react";
+import { LazyMotion, domMax, m } from "framer-motion";
 
 type Props = {
 	children: React.ReactNode;

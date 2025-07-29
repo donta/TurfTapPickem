@@ -75,34 +75,34 @@ const buildMediaQuery = (config: MediaQueryConfig | string): string => {
  * @see {@link MediaQueryConfig} for all supported configuration options
  */
 export const useMediaQuery = (config: MediaQueryConfig | string) => {
-	// 服务器端渲染时默认为 false
+	// Default to false for server-side rendering
 	const [matches, setMatches] = useState(false);
 
-	// 将 config 转换为 mediaQuery 字符串
+	// Convert config to mediaQuery string
 	const mediaQueryString = useMemo(() => buildMediaQuery(config), [config]);
 
 	useEffect(() => {
-		// 客户端渲染时立即检查当前状态
+		// Immediately check current state for client-side rendering
 		const mediaQuery = window.matchMedia(mediaQueryString);
 		setMatches(mediaQuery.matches);
 
-		// 监听变化
+		// Listen for changes
 		const handler = (e: MediaQueryListEvent) => setMatches(e.matches);
 
-		// 使用新旧两种 API 以确保最大兼容性
+		// Use both new and old APIs for maximum compatibility
 		if (mediaQuery.addEventListener) {
 			mediaQuery.addEventListener("change", handler);
 		} else {
-			// 兼容旧版浏览器
+			// For compatibility with older browsers
 			mediaQuery.addListener(handler);
 		}
 
-		// 清理函数
+		// Cleanup function
 		return () => {
 			if (mediaQuery.removeEventListener) {
 				mediaQuery.removeEventListener("change", handler);
 			} else {
-				// 兼容旧版浏览器
+				// For compatibility with older browsers
 				mediaQuery.removeListener(handler);
 			}
 		};
@@ -113,13 +113,13 @@ export const useMediaQuery = (config: MediaQueryConfig | string) => {
 
 type Breakpoints = typeof breakpointsTokens;
 type BreakpointsKeys = keyof Breakpoints;
-// 辅助函数
+// Helper functions
 export const up = (key: BreakpointsKeys) => ({
 	minWidth: removePx(breakpointsTokens[key]),
 });
 
 export const down = (key: BreakpointsKeys) => ({
-	maxWidth: removePx(breakpointsTokens[key]) - 0.05, // 减去0.05px避免断点重叠
+	maxWidth: removePx(breakpointsTokens[key]) - 0.05, // Subtract 0.05px to avoid breakpoint overlap
 });
 
 export const between = (start: BreakpointsKeys, end: BreakpointsKeys) => ({

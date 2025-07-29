@@ -123,27 +123,27 @@ export const getThemeTokenVariants = (propertyPath: string) => {
  * @throws Error if value is invalid
  */
 export const removePx = (value: string | number): number => {
-	// 如果已经是数字，直接返回
+	// If it's already a number, return directly
 	if (typeof value === "number") return value;
 
-	// 如果是空字符串，抛出错误
+	// If it's an empty string, throw an error
 	if (!value) {
 		throw new Error("Invalid value: empty string");
 	}
 
-	// 移除所有空格
+	// Remove all whitespace
 	const trimmed = value.trim();
 
-	// 检查是否以 px 结尾（不区分大小写）
+	// Check if it ends with px (case-insensitive)
 	const hasPx = /px$/i.test(trimmed);
 
-	// 提取数字部分
+	// Extract the numeric part
 	const num = hasPx ? trimmed.slice(0, -2) : trimmed;
 
-	// 转换为数字
+	// Convert to number
 	const result = Number.parseFloat(num);
 
-	// 验证结果是否为有效数字
+	// Validate if the result is a valid number
 	if (Number.isNaN(result)) {
 		throw new Error(`Invalid value: ${value}`);
 	}

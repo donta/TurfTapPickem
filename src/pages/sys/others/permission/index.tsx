@@ -15,12 +15,12 @@ const Component_Auth_1 = `
   baseOn="permission"
   fallback={
     <Text variant="body1" color="error">
-      没有<Text variant="code">permission:delete</Text>权限
+      No <Text variant="code">permission:delete</Text> permission
     </Text>
   }
 >
   <Button variant="destructive">
-    删除
+    Delete
   </Button>
 </AuthGuard>
 `;
@@ -31,7 +31,7 @@ const Component_Auth_2 = `
   baseOn="permission"
   fallback={
     <Text variant="body1" color="error">
-      没有<Text variant="code">permission:update</Text>或<Text variant="code">permission:delete</Text>权限
+      No <Text variant="code">permission:update</Text> or <Text variant="code">permission:delete</Text> permission
     </Text>
   }
 >
@@ -45,7 +45,7 @@ const Component_Auth_3 = `
   baseOn="permission"
   fallback={
     <Text variant="body1" color="error">
-      没有<Text variant="code">permission:read</Text>和<Text variant="code">permission:create</Text>权限
+      No <Text variant="code">permission:read</Text> and <Text variant="code">permission:create</Text> permission
     </Text>
   }
 >
@@ -59,7 +59,7 @@ check("permission:delete") ? (
   <Button variant="destructive">Delete</Button>
 ) : (
   <Text variant="body1" color="error">
-    没有<Text variant="code">permission:delete</Text>权限
+    No <Text variant="code">permission:delete</Text> permission
   </Text>
 );
 `;
@@ -95,7 +95,7 @@ export default function PermissionPage() {
 	return (
 		<div className="flex flex-col gap-4">
 			<div className="w-full flex  items-center justify-center">
-				<Text variant="subTitle1">当前用户：</Text>
+				<Text variant="subTitle1">Current User:</Text>
 				<Tabs defaultValue={username} onValueChange={handleSwitch}>
 					<TabsList>
 						{DB_USER.map((user) => (
@@ -109,7 +109,7 @@ export default function PermissionPage() {
 			<Card>
 				<CardContent>
 					<div className="flex items-center gap-2">
-						<Text variant="body1">当前用户角色：</Text>
+						<Text variant="body1">Current User Roles:</Text>
 						{permissions && permissions.length > 0 ? (
 							<Text variant="body1">[{roles?.map((role) => role.name).join(", ")}]</Text>
 						) : (
@@ -117,7 +117,7 @@ export default function PermissionPage() {
 						)}
 					</div>
 					<div className="flex items-center gap-2">
-						<Text variant="body1">当前用户权限：</Text>
+						<Text variant="body1">Current User Permissions:</Text>
 						{permissions && permissions.length > 0 ? (
 							<Text variant="body1">[{permissions?.map((permission) => permission.code).join(", ")}]</Text>
 						) : (
@@ -129,19 +129,22 @@ export default function PermissionPage() {
 
 			<Card>
 				<CardHeader>
-					<CardTitle>页面鉴权测试</CardTitle>
-					<CardDescription>点击下面按钮，当拥有页面指定权限时正常显示，否则显示403</CardDescription>
+					<CardTitle>Page Authorization Test</CardTitle>
+					<CardDescription>
+						Click the buttons below. When you have the required permissions, the content will display normally;
+						otherwise, it will show a 403 error.
+					</CardDescription>
 				</CardHeader>
 				<CardContent>
 					<Link to="/permission/page-test">
-						<Button>跳转页面</Button>
+						<Button>Go to Page</Button>
 					</Link>
 				</CardContent>
 			</Card>
 
 			<Card>
 				<CardHeader>
-					<CardTitle>组件鉴权测试</CardTitle>
+					<CardTitle>Component Authorization Test</CardTitle>
 				</CardHeader>
 				<CardContent>
 					<div className="flex gap-2 flex-col">
@@ -150,15 +153,15 @@ export default function PermissionPage() {
 							options={{
 								lang: "tsx",
 							}}
-							title="单权限校验"
-							description="当用户拥有permission:delete权限时，显示Delete按钮，否则fallback"
+							title="Single Permission Check"
+							description="When the user has permission:delete permission, show the Delete button; otherwise, fallback"
 						>
 							<AuthGuard
 								check="permission:delete"
 								baseOn="permission"
 								fallback={
 									<Text variant="body1" color="error">
-										没有<Text variant="code">permission:delete</Text>权限
+										No <Text variant="code">permission:delete</Text> permission
 									</Text>
 								}
 							>
@@ -168,8 +171,8 @@ export default function PermissionPage() {
 
 						<CodeBlock
 							code={Component_Auth_2.trim()}
-							title="任意权限校验"
-							description="当用户拥有permission:update或permission:delete权限时，显示Detail按钮，否则fallback"
+							title="Any Permission Check"
+							description="When the user has permission:update or permission:delete permission, show the Detail button; otherwise, fallback"
 							options={{
 								lang: "tsx",
 							}}
@@ -179,7 +182,8 @@ export default function PermissionPage() {
 								baseOn="permission"
 								fallback={
 									<Text variant="body1" color="error">
-										没有<Text variant="code">permission:update</Text>或<Text variant="code">permission:delete</Text>权限
+										No <Text variant="code">permission:update</Text> or <Text variant="code">permission:delete</Text>{" "}
+										permission
 									</Text>
 								}
 							>
@@ -192,15 +196,16 @@ export default function PermissionPage() {
 							options={{
 								lang: "tsx",
 							}}
-							title="多权限校验"
-							description="当用户拥有permission:read和permission:create权限时，显示Add按钮，否则fallback"
+							title="Multiple Permission Check"
+							description="When the user has permission:read and permission:create permissions, show the Add button; otherwise, fallback"
 						>
 							<AuthGuard
 								checkAll={["permission:read", "permission:create"]}
 								baseOn="permission"
 								fallback={
 									<Text variant="body1" color="error">
-										没有<Text variant="code">permission:read</Text>和<Text variant="code">permission:create</Text>权限
+										No <Text variant="code">permission:read</Text> and <Text variant="code">permission:create</Text>{" "}
+										permissions
 									</Text>
 								}
 							>
@@ -213,7 +218,7 @@ export default function PermissionPage() {
 
 			<Card>
 				<CardHeader>
-					<CardTitle>函数鉴权测试</CardTitle>
+					<CardTitle>Function Authorization Test</CardTitle>
 				</CardHeader>
 				<CardContent>
 					<div className="flex gap-2 flex-col">
@@ -222,22 +227,22 @@ export default function PermissionPage() {
 							options={{
 								lang: "tsx",
 							}}
-							title="单权限校验"
-							description="当用户拥有permission:delete权限时，显示Delete按钮，否则fallback"
+							title="Single Permission Check"
+							description="When the user has permission:delete permission, show Delete button, otherwise fallback"
 						>
 							{check("permission:delete") ? (
 								<Button variant="destructive">Delete</Button>
 							) : (
 								<Text variant="body1" color="error">
-									没有<Text variant="code">permission:delete</Text>权限
+									No <Text variant="code">permission:delete</Text> permission
 								</Text>
 							)}
 						</CodeBlock>
 
 						<CodeBlock
 							code={Function_Auth_2.trim()}
-							title="任意权限校验"
-							description="当用户拥有permission:update或permission:delete权限时，显示Detail按钮，否则fallback"
+							title="Any Permission Check"
+							description="When user has either permission:update or permission:delete permission, show Detail button, otherwise fallback"
 							options={{
 								lang: "tsx",
 							}}
@@ -246,7 +251,8 @@ export default function PermissionPage() {
 								<Button variant="secondary">Detail</Button>
 							) : (
 								<Text variant="body1" color="error">
-									没有<Text variant="code">permission:update</Text>或<Text variant="code">permission:delete</Text>权限
+									No <Text variant="code">permission:update</Text> or <Text variant="code">permission:delete</Text>{" "}
+									permission
 								</Text>
 							)}
 						</CodeBlock>
@@ -256,14 +262,15 @@ export default function PermissionPage() {
 							options={{
 								lang: "tsx",
 							}}
-							title="多权限校验"
-							description="当用户拥有permission:read和permission:create权限时，显示Add按钮，否则fallback"
+							title="Multiple Permissions Check"
+							description="When user has both permission:read and permission:create permissions, show Add button, otherwise fallback"
 						>
 							{checkAll(["permission:read", "permission:create"]) ? (
 								<Button variant="secondary">Add</Button>
 							) : (
 								<Text variant="body1" color="error">
-									没有<Text variant="code">permission:read</Text>和<Text variant="code">permission:create</Text>权限
+									No <Text variant="code">permission:read</Text> and <Text variant="code">permission:create</Text>{" "}
+									permissions
 								</Text>
 							)}
 						</CodeBlock>

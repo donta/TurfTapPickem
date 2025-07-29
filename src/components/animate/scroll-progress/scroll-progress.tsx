@@ -1,14 +1,14 @@
 import { useTheme } from "@/theme/hooks";
-import { type HTMLMotionProps, type MotionValue, m, useSpring } from "motion/react";
+import { type HTMLMotionProps, type MotionValue, m, useSpring } from "framer-motion";
 import type { CSSProperties } from "react";
 
 /**
- * ScrollProgress 组件属性接口
+ * ScrollProgress component properties interface
  * @interface Props
- * @extends {HTMLMotionProps<"div">} - 继承自 Framer Motion 的 div 元素属性
- * @property {string} [color] - 进度条颜色，可选
- * @property {MotionValue<number>} scrollYProgress - 滚动进度值，范围 0-1
- * @property {number} [height=4] - 进度条高度，默认为 4px
+ * @extends {HTMLMotionProps<"div">} - Extends from Framer Motion's div element properties
+ * @property {string} [color] - Progress bar color, optional
+ * @property {MotionValue<number>} scrollYProgress - Scroll progress value, range 0-1
+ * @property {number} [height=4] - Progress bar height, defaults to 4px
  */
 interface Props extends HTMLMotionProps<"div"> {
 	color?: string;
@@ -17,16 +17,16 @@ interface Props extends HTMLMotionProps<"div"> {
 }
 
 /**
- * 滚动进度条组件
+ * Scroll Progress Component
  *
- * 该组件用于显示页面滚动进度，创建一个平滑的进度条动画效果。
- * 使用 Framer Motion 的 spring 动画实现平滑过渡。
+ * This component displays the page scroll progress with a smooth progress bar animation effect.
+ * Uses Framer Motion's spring animation for smooth transitions.
  *
  * @component
- * @param {Props} props - 组件属性
- * @param {MotionValue<number>} props.scrollYProgress - 滚动进度值
- * @param {number} [props.height=4] - 进度条高度
- * @param {string} [props.color] - 进度条颜色，默认使用主题色
+ * @param {Props} props - Component properties
+ * @param {MotionValue<number>} props.scrollYProgress - Scroll progress value
+ * @param {number} [props.height=4] - Progress bar height
+ * @param {string} [props.color] - Progress bar color, defaults to theme color
  *
  * @example
  * ```tsx
@@ -35,23 +35,23 @@ interface Props extends HTMLMotionProps<"div"> {
  * ```
  */
 export function ScrollProgress({ scrollYProgress, height = 4, color, ...other }: Props) {
-	// 使用 spring 动画使进度条变化更平滑
+	// Use spring animation to make progress bar changes smoother
 	const scaleX = useSpring(scrollYProgress, {
-		stiffness: 100, // 弹簧刚度
-		damping: 30, // 阻尼系数
-		restDelta: 0.001, // 停止动画的阈值
+		stiffness: 100, // Spring stiffness
+		damping: 30, // Damping coefficient
+		restDelta: 0.001, // Animation stop threshold
 	});
 
 	const { themeTokens } = useTheme();
 
-	// 设置进度条颜色，优先使用传入的颜色，否则使用主题色
+	// Set progress bar color, use provided color if available, otherwise use theme color
 	const backgroundColor = color || themeTokens.color.palette.primary.default;
 
-	// 进度条样式配置
+	// Progress bar style configuration
 	const style: CSSProperties = {
-		transformOrigin: "0%", // 设置变换原点在左侧
-		height, // 设置高度
-		backgroundColor, // 设置背景色
+		transformOrigin: "0%", // Set transform origin to left side
+		height, // Set height
+		backgroundColor, // Set background color
 	};
 
 	return <m.div style={{ scaleX, ...style }} {...other} />;

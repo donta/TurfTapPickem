@@ -52,14 +52,14 @@ const baseCharOptions = (themeMode: ThemeMode, themeColorPresets: ThemeColorPres
 			parentHeightOffset: 0,
 			foreColor: themeVars.colors.text.disabled,
 			fontFamily: themeVars.typography.fontFamily.openSans,
-			// 优化动画配置以提高响应式性能
+			// Optimize animation configuration to improve responsive performance
 			animations: {
 				enabled: true,
 				speed: 360,
 				animateGradually: { enabled: true, delay: 120 },
 				dynamicAnimation: { enabled: true, speed: 360 },
 			},
-			// 启用快速响应式重绘
+			// Enable fast responsive redraw
 			redrawOnParentResize: true,
 			redrawOnWindowResize: true,
 		},
