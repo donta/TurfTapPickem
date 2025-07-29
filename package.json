@@ -98,7 +98,7 @@
 		"vite-tsconfig-paths": "^5.1.2"
 	},
 	"overrides": {
-		"graphql": "^16.11.0",
+		"graphql": "^15.5.0",
 		"@aws-sdk/types": "^3.821.0"
 	},
 	"engines": {
