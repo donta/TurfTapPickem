@@ -102,11 +102,9 @@
 		"@aws-sdk/types": "^3.821.0"
 	},
 	"engines": {
-		"node": ">=20.0.0"
+		"node": ">=18.20.8"
 	},
 	"msw": {
-		"workerDirectory": [
-			"public"
-		]
+		"workerDirectory": ["public"]
 	}
 }
