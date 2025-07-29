@@ -1,0 +1,6 @@
+{
+	"task": "Design a NOSQL Schema for a DynamoDB database.",
+	"topic": "The database is used to store data for an NFL Pickem League Website",
+	"main entities": "users, user types, leagues, weekly schedule, league setttings, weekly picks by user, standings by week and overall",
+	"data access": "frequent reads"
+}

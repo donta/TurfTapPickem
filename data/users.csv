@@ -1,0 +1,11 @@
+user_id,username,email,user_type,created_at,profile
+user001,john_doe,john.doe@example.com,player,2025-07-29T09:00:00Z,"{""name"":""John Doe"",""favorite_team"":""Patriots""}"
+user002,jane_smith,jane.smith@example.com,player,2025-07-29T09:01:00Z,"{""name"":""Jane Smith"",""favorite_team"":""Eagles""}"
+user003,bob_jones,bob.jones@example.com,admin,2025-07-29T09:02:00Z,"{""name"":""Bob Jones"",""favorite_team"":""Chiefs""}"
+user004,alice_brown,alice.brown@example.com,player,2025-07-29T09:03:00Z,"{""name"":""Alice Brown"",""favorite_team"":""Packers""}"
+user005,tom_wilson,tom.wilson@example.com,player,2025-07-29T09:04:00Z,"{""name"":""Tom Wilson"",""favorite_team"":""Steelers""}"
+user006,emma_davis,emma.davis@example.com,player,2025-07-29T09:05:00Z,"{""name"":""Emma Davis"",""favorite_team"":""Cowboys""}"
+user007,mike_clark,mike.clark@example.com,player,2025-07-29T09:06:00Z,"{""name"":""Mike Clark"",""favorite_team"":""49ers""}"
+user008,sarah_lee,sarah.lee@example.com,player,2025-07-29T09:07:00Z,"{""name"":""Sarah Lee"",""favorite_team"":""Ravens""}"
+user009,david_kim,david.kim@example.com,player,2025-07-29T09:08:00Z,"{""name"":""David Kim"",""favorite_team"":""Bills""}"
+user010,laura_martin,laura.martin@example.com,admin,2025-07-29T09:09:00Z,"{""name"":""Laura Martin"",""favorite_team"":""Dolphins""}"

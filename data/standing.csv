@@ -1,0 +1,11 @@
+league_id,standings_type,week,standings
+league001,weekly_2025_1,2025_1,"[{""user_id"":""user001"",""username"":""john_doe"",""correct_picks"":8,""points"":10},{""user_id"":""user002"",""username"":""jane_smith"",""correct_picks"":7,""points"":8}]"
+league001,overall_2025,2025_1,"[{""user_id"":""user001"",""username"":""john_doe"",""correct_picks"":8,""points"":10},{""user_id"":""user002"",""username"":""jane_smith"",""correct_picks"":7,""points"":8}]"
+league002,weekly_2025_1,2025_1,"[{""user_id"":""user003"",""username"":""bob_jones"",""correct_picks"":6,""points"":9},{""user_id"":""user005"",""username"":""tom_wilson"",""correct_picks"":5,""points"":7}]"
+league002,overall_2025,2025_1,"[{""user_id"":""user003"",""username"":""bob_jones"",""correct_picks"":6,""points"":9},{""user_id"":""user005"",""username"":""tom_wilson"",""correct_picks"":5,""points"":7}]"
+league003,weekly_2025_1,2025_1,"[{""user_id"":""user007"",""username"":""mike_clark"",""correct_picks"":9,""points"":11},{""user_id"":""user008"",""username"":""sarah_lee"",""correct_picks"":6,""points"":8}]"
+league004,weekly_2025_2,2025_2,"[{""user_id"":""user004"",""username"":""alice_brown"",""correct_picks"":7,""points"":9},{""user_id"":""user009"",""username"":""david_kim"",""correct_picks"":6,""points"":8}]"
+league005,weekly_2025_2,2025_2,"[{""user_id"":""user006"",""username"":""emma_davis"",""correct_picks"":8,""points"":10},{""user_id"":""user010"",""username"":""laura_martin"",""correct_picks"":5,""points"":7}]"
+league006,weekly_2025_2,2025_2,"[{""user_id"":""user008"",""username"":""sarah_lee"",""correct_picks"":6,""points"":8},{""user_id"":""user001"",""username"":""john_doe"",""correct_picks"":5,""points"":7}]"
+league007,weekly_2025_2,2025_2,"[{""user_id"":""user009"",""username"":""david_kim"",""correct_picks"":7,""points"":9},{""user_id"":""user007"",""username"":""mike_clark"",""correct_picks"":6,""points"":8}]"
+league008,overall_2025,2025_2,"[{""user_id"":""user010"",""username"":""laura_martin"",""correct_picks"":12,""points"":15},{""user_id"":""user005"",""username"":""tom_wilson"",""correct_picks"":10,""points"":13}]"

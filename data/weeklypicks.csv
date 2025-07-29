@@ -1,0 +1,11 @@
+league_id,user_id_week,user_id,week,picks,submission_time
+league001,user001_2025_1,user001,2025_1,"[{""game_id"":""game001"",""picked_team"":""Patriots""},{""game_id"":""game002"",""picked_team"":""Chiefs""}]",2025-09-07T10:00:00Z
+league001,user002_2025_1,user002,2025_1,"[{""game_id"":""game001"",""picked_team"":""Eagles""},{""game_id"":""game002"",""picked_team"":""Ravens""}]",2025-09-07T10:05:00Z
+league002,user003_2025_1,user003,2025_1,"[{""game_id"":""game003"",""picked_team"":""Packers""},{""game_id"":""game004"",""picked_team"":""Steelers""}]",2025-09-07T10:10:00Z
+league002,user005_2025_1,user005,2025_1,"[{""game_id"":""game003"",""picked_team"":""Bears""},{""game_id"":""game004"",""picked_team"":""Browns""}]",2025-09-07T10:15:00Z
+league003,user007_2025_1,user007,2025_1,"[{""game_id"":""game005"",""picked_team"":""Cowboys""},{""game_id"":""game001"",""picked_team"":""Patriots""}]",2025-09-07T10:20:00Z
+league004,user004_2025_2,user004,2025_2,"[{""game_id"":""game006"",""picked_team"":""49ers""},{""game_id"":""game007"",""picked_team"":""Bills""}]",2025-09-14T10:00:00Z
+league005,user006_2025_2,user006,2025_2,"[{""game_id"":""game008"",""picked_team"":""Lions""},{""game_id"":""game009"",""picked_team"":""Chargers""}]",2025-09-14T10:05:00Z
+league006,user008_2025_2,user008,2025_2,"[{""game_id"":""game010"",""picked_team"":""Rams""},{""game_id"":""game006"",""picked_team"":""Vikings""}]",2025-09-14T10:10:00Z
+league007,user009_2025_2,user009,2025_2,"[{""game_id"":""game007"",""picked_team"":""Dolphins""},{""game_id"":""game008"",""picked_team"":""Buccaneers""}]",2025-09-14T10:15:00Z
+league008,user010_2025_2,user010,2025_2,"[{""game_id"":""game009"",""picked_team"":""Panthers""},{""game_id"":""game010"",""picked_team"":""Cardinals""}]",2025-09-14T10:20:00Z

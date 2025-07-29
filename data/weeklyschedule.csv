@@ -1,0 +1,11 @@
+season_week,game_id,home_team,away_team,game_date,result
+2025_1,game001,Patriots,Eagles,2025-09-07T13:00:00Z,"{""winner"":null,""score"":null}"
+2025_1,game002,Chiefs,Ravens,2025-09-07T16:25:00Z,"{""winner"":null,""score"":null}"
+2025_1,game003,Packers,Bears,2025-09-07T13:00:00Z,"{""winner"":null,""score"":null}"
+2025_1,game004,Steelers,Browns,2025-09-07T16:25:00Z,"{""winner"":null,""score"":null}"
+2025_1,game005,Cowboys,Giants,2025-09-07T20:20:00Z,"{""winner"":null,""score"":null}"
+2025_2,game006,49ers,Vikings,2025-09-14T13:00:00Z,"{""winner"":null,""score"":null}"
+2025_2,game007,Bills,Dolphins,2025-09-14T16:25:00Z,"{""winner"":null,""score"":null}"
+2025_2,game008,Lions,Buccaneers,2025-09-14T13:00:00Z,"{""winner"":null,""score"":null}"
+2025_2,game009,Chargers,Panthers,2025-09-14T16:25:00Z,"{""winner"":null,""score"":null}"
+2025_2,game010,Rams,Cardinals,2025-09-14T20:20:00Z,"{""winner"":null,""score"":null}"

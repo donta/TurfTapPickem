@@ -1,0 +1,11 @@
+league_id,league_name,owner_id,settings,created_at,members
+league001,NFL Fanatics 2025,user001,"{""max_players"":20,""pick_deadline"":""Sunday 12:00 PM"",""scoring"":{""correct_pick"":1,""bonus_points"":2}}",2025-07-29T09:10:00Z,"[""user001"",""user002"",""user004""]"
+league002,Gridiron Gurus,user003,"{""max_players"":15,""pick_deadline"":""Sunday 11:00 AM"",""scoring"":{""correct_pick"":1,""bonus_points"":3}}",2025-07-29T09:11:00Z,"[""user003"",""user005"",""user006""]"
+league003,Touchdown Titans,user002,"{""max_players"":25,""pick_deadline"":""Sunday 12:30 PM"",""scoring"":{""correct_pick"":2,""bonus_points"":1}}",2025-07-29T09:12:00Z,"[""user002"",""user007"",""user008""]"
+league004,Pigskin Pros,user004,"{""max_players"":10,""pick_deadline"":""Sunday 10:00 AM"",""scoring"":{""correct_pick"":1,""bonus_points"":2}}",2025-07-29T09:13:00Z,"[""user004"",""user009""]"
+league005,Endzone Elites,user005,"{""max_players"":30,""pick_deadline"":""Sunday 1:00 PM"",""scoring"":{""correct_pick"":1,""bonus_points"":1}}",2025-07-29T09:14:00Z,"[""user005"",""user010""]"
+league006,Blitz Brigade,user006,"{""max_players"":12,""pick_deadline"":""Sunday 11:30 AM"",""scoring"":{""correct_pick"":2,""bonus_points"":2}}",2025-07-29T09:15:00Z,"[""user006"",""user001"",""user003""]"
+league007,Field Goal Fanatics,user007,"{""max_players"":18,""pick_deadline"":""Sunday 12:00 PM"",""scoring"":{""correct_pick"":1,""bonus_points"":3}}",2025-07-29T09:16:00Z,"[""user007"",""user002"",""user004""]"
+league008,Quarterback Quorum,user008,"{""max_players"":20,""pick_deadline"":""Sunday 10:30 AM"",""scoring"":{""correct_pick"":1,""bonus_points"":2}}",2025-07-29T09:17:00Z,"[""user008"",""user005"",""user009""]"
+league009,Redzone Renegades,user009,"{""max_players"":15,""pick_deadline"":""Sunday 11:00 AM"",""scoring"":{""correct_pick"":2,""bonus_points"":1}}",2025-07-29T09:18:00Z,"[""user009"",""user006"",""user010""]"
+league010,Super Bowl Squad,user010,"{""max_players"":22,""pick_deadline"":""Sunday 12:00 PM"",""scoring"":{""correct_pick"":1,""bonus_points"":2}}",2025-07-29T09:19:00Z,"[""user010"",""user001"",""user007""]"

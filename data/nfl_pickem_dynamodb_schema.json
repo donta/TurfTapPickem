@@ -1,0 +1,306 @@
+{
+	"ModelName": "NFLPickemLeague",
+	"ModelMetadata": {
+		"Author": "",
+		"DateCreated": "Jul 29, 2025, 09:55 AM",
+		"DateLastModified": "Jul 29, 2025, 09:55 AM",
+		"Description": "DynamoDB schema for NFL Pickem League Website",
+		"AWSService": "Amazon DynamoDB",
+		"Version": "3.0"
+	},
+	"DataModel": [
+		{
+			"TableName": "Users",
+			"KeyAttributes": {
+				"PartitionKey": {
+					"AttributeName": "user_id",
+					"AttributeType": "S"
+				}
+			},
+			"NonKeyAttributes": [
+				{
+					"AttributeName": "username",
+					"AttributeType": "S"
+				},
+				{
+					"AttributeName": "email",
+					"AttributeType": "S"
+				},
+				{
+					"AttributeName": "user_type",
+					"AttributeType": "S"
+				},
+				{
+					"AttributeName": "created_at",
+					"AttributeType": "S"
+				},
+				{
+					"AttributeName": "profile",
+					"AttributeType": "M"
+				}
+			],
+			"SecondaryIndexes": [
+				{
+					"IndexName": "GSI_Email",
+					"KeyAttributes": {
+						"PartitionKey": {
+							"AttributeName": "email",
+							"AttributeType": "S"
+						}
+					},
+					"NonKeyAttributes": [
+						{
+							"AttributeName": "user_id",
+							"AttributeType": "S"
+						},
+						{
+							"AttributeName": "username",
+							"AttributeType": "S"
+						},
+						{
+							"AttributeName": "user_type",
+							"AttributeType": "S"
+						}
+					],
+					"ProjectionType": "INCLUDE",
+					"ProvisionedCapacitySettings": {
+						"ProvisionedThroughput": {
+							"ReadCapacityUnits": 5,
+							"WriteCapacityUnits": 5
+						}
+					}
+				}
+			],
+			"DataAccess": {
+				"MySql": {}
+			},
+			"BillingMode": "PROVISIONED",
+			"ProvisionedCapacitySettings": {
+				"ProvisionedThroughput": {
+					"ReadCapacityUnits": 5,
+					"WriteCapacityUnits": 5
+				}
+			}
+		},
+		{
+			"TableName": "Leagues",
+			"KeyAttributes": {
+				"PartitionKey": {
+					"AttributeName": "league_id",
+					"AttributeType": "S"
+				}
+			},
+			"NonKeyAttributes": [
+				{
+					"AttributeName": "league_name",
+					"AttributeType": "S"
+				},
+				{
+					"AttributeName": "owner_id",
+					"AttributeType": "S"
+				},
+				{
+					"AttributeName": "settings",
+					"AttributeType": "M"
+				},
+				{
+					"AttributeName": "created_at",
+					"AttributeType": "S"
+				},
+				{
+					"AttributeName": "members",
+					"AttributeType": "L"
+				}
+			],
+			"SecondaryIndexes": [
+				{
+					"IndexName": "GSI_Owner",
+					"KeyAttributes": {
+						"PartitionKey": {
+							"AttributeName": "owner_id",
+							"AttributeType": "S"
+						}
+					},
+					"NonKeyAttributes": [
+						{
+							"AttributeName": "league_id",
+							"AttributeType": "S"
+						},
+						{
+							"AttributeName": "league_name",
+							"AttributeType": "S"
+						}
+					],
+					"ProjectionType": "INCLUDE",
+					"ProvisionedCapacitySettings": {
+						"ProvisionedThroughput": {
+							"ReadCapacityUnits": 5,
+							"WriteCapacityUnits": 5
+						}
+					}
+				}
+			],
+			"DataAccess": {
+				"MySql": {}
+			},
+			"BillingMode": "PROVISIONED",
+			"ProvisionedCapacitySettings": {
+				"ProvisionedThroughput": {
+					"ReadCapacityUnits": 5,
+					"WriteCapacityUnits": 5
+				}
+			}
+		},
+		{
+			"TableName": "WeeklySchedule",
+			"KeyAttributes": {
+				"PartitionKey": {
+					"AttributeName": "season_week",
+					"AttributeType": "S"
+				},
+				"SortKey": {
+					"AttributeName": "game_id",
+					"AttributeType": "S"
+				}
+			},
+			"NonKeyAttributes": [
+				{
+					"AttributeName": "home_team",
+					"AttributeType": "S"
+				},
+				{
+					"AttributeName": "away_team",
+					"AttributeType": "S"
+				},
+				{
+					"AttributeName": "game_date",
+					"AttributeType": "S"
+				},
+				{
+					"AttributeName": "result",
+					"AttributeType": "M"
+				}
+			],
+			"DataAccess": {
+				"MySql": {}
+			},
+			"BillingMode": "PROVISIONED",
+			"ProvisionedCapacitySettings": {
+				"ProvisionedThroughput": {
+					"ReadCapacityUnits": 5,
+					"WriteCapacityUnits": 5
+				}
+			}
+		},
+		{
+			"TableName": "WeeklyPicks",
+			"KeyAttributes": {
+				"PartitionKey": {
+					"AttributeName": "league_id",
+					"AttributeType": "S"
+				},
+				"SortKey": {
+					"AttributeName": "user_id_week",
+					"AttributeType": "S"
+				}
+			},
+			"NonKeyAttributes": [
+				{
+					"AttributeName": "user_id",
+					"AttributeType": "S"
+				},
+				{
+					"AttributeName": "week",
+					"AttributeType": "S"
+				},
+				{
+					"AttributeName": "picks",
+					"AttributeType": "L"
+				},
+				{
+					"AttributeName": "submission_time",
+					"AttributeType": "S"
+				}
+			],
+			"SecondaryIndexes": [
+				{
+					"IndexName": "GSI_UserPicks",
+					"KeyAttributes": {
+						"PartitionKey": {
+							"AttributeName": "user_id",
+							"AttributeType": "S"
+						},
+						"SortKey": {
+							"AttributeName": "week",
+							"AttributeType": "S"
+						}
+					},
+					"NonKeyAttributes": [
+						{
+							"AttributeName": "league_id",
+							"AttributeType": "S"
+						},
+						{
+							"AttributeName": "picks",
+							"AttributeType": "L"
+						},
+						{
+							"AttributeName": "submission_time",
+							"AttributeType": "S"
+						}
+					],
+					"ProjectionType": "INCLUDE",
+					"ProvisionedCapacitySettings": {
+						"ProvisionedThroughput": {
+							"ReadCapacityUnits": 5,
+							"WriteCapacityUnits": 5
+						}
+					}
+				}
+			],
+			"DataAccess": {
+				"MySql": {}
+			},
+			"BillingMode": "PROVISIONED",
+			"ProvisionedCapacitySettings": {
+				"ProvisionedThroughput": {
+					"ReadCapacityUnits": 5,
+					"WriteCapacityUnits": 5
+				}
+			}
+		},
+		{
+			"TableName": "Standings",
+			"KeyAttributes": {
+				"PartitionKey": {
+					"AttributeName": "league_id",
+					"AttributeType": "S"
+				},
+				"SortKey": {
+					"AttributeName": "standings_type",
+					"AttributeType": "S"
+				}
+			},
+			"NonKeyAttributes": [
+				{
+					"AttributeName": "week",
+					"AttributeType": "S"
+				},
+				{
+					"AttributeName": "standings",
+					"AttributeType": "L"
+				}
+			],
+			"DataAccess": {
+				"MySql": {}
+			},
+			"BillingMode": "PROVISIONED",
+			"ProvisionedCapacitySettings": {
+				"ProvisionedThroughput": {
+					"ReadCapacityUnits": 5,
+					"WriteCapacityUnits": 5
+				}
+			}
+		}
+	]
+}
