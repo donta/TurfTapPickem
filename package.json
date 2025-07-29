@@ -97,6 +97,9 @@
 		"vite": "^6.2.0",
 		"vite-tsconfig-paths": "^5.1.2"
 	},
+	"resolutions": {
+		"graphql": "^16.11.0"
+	},
 	"engines": {
 		"node": "20.*"
 	},
