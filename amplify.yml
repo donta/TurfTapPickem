@@ -3,6 +3,7 @@ frontend:
   phases:
     build:
       commands:
+        - npm install typescript
         - npm run build
   artifacts:
     baseDirectory: dist
