@@ -1,4 +1,4 @@
-import Logo from "@/assets/icons/ic-logo-badge.svg";
+import Logo from "@/assets/images/logo.png";
 import { Icon } from "@/components/icon";
 import { Button } from "@/ui/button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/ui/tooltip";

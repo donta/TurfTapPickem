@@ -1,11 +1,12 @@
 import apiClient from "../apiClient";
+import type { Pet } from "../models/pet.interface";
 
 export enum DemoApi {
-	TOKEN_EXPIRED = "/user/tokenExpired",
+	TOKEN_EXPIRED = "/Test/pets",
 }
 
-const mockTokenExpired = () => apiClient.post({ url: DemoApi.TOKEN_EXPIRED });
+const mockPets = () => apiClient.get<Pet[]>({ url: DemoApi.TOKEN_EXPIRED });
 
 export default {
-	mockTokenExpired,
+	mockPets,
 };

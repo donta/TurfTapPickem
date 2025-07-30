@@ -34,6 +34,7 @@ export enum ThemeColorPresets {
 	Blue = "blue",
 	Orange = "orange",
 	Red = "red",
+	ANR = "anr",
 }
 
 export enum LocalEnum {

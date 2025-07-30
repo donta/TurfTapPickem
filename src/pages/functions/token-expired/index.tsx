@@ -1,14 +1,21 @@
 import demoService from "@/api/services/demoService";
 import { Button } from "@/ui/button";
 import { Card, CardContent } from "@/ui/card";
-import { useMutation } from "@tanstack/react-query";
 
 export default function TokenExpired() {
-	const tokenExpiredMutation = useMutation({
-		mutationFn: demoService.mockTokenExpired,
-	});
+	// const tokenExpiredMutation = useMutation({
+	// 	mutationFn: demoService.mockTokenExpired,
+	// });
+
 	const mockTokenExpired = () => {
-		tokenExpiredMutation.mutate();
+		demoService
+			.mockPets()
+			.then((response) => {
+				console.log("Mock pets data:", response);
+			})
+			.catch((error) => {
+				console.error("Error fetching mock pets data:", error);
+			});
 	};
 	return (
 		<Card>
