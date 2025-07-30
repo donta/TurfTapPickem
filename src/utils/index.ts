@@ -8,6 +8,9 @@ export function cn(...inputs: ClassValue[]) {
 	return twMerge(clsx(inputs));
 }
 
+// Re-export version utilities
+export * from "./version";
+
 /**
  * check if item exists in resourcePool
  */

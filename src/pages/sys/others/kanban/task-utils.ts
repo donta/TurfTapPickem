@@ -1,14 +1,9 @@
 import { faker } from "@faker-js/faker";
 
-import {
-	type DndDataType,
-	type TaskComment,
-	TaskPriority,
-	TaskTag,
-} from "./types";
+import { type DndDataType, type TaskComment, TaskPriority, TaskTag } from "./types";
 
 const fakeComment = (count: number): TaskComment[] => {
-	const result = [];
+	const result: TaskComment[] = [];
 	for (let index = 0; index < count; index += 1) {
 		result.push({
 			username: faker.person.fullName(),
@@ -20,25 +15,25 @@ const fakeComment = (count: number): TaskComment[] => {
 	return result;
 };
 
-const fakeAttachment = (count: number) => {
-	const result = [];
+const fakeAttachment = (count: number): string[] => {
+	const result: string[] = [];
 	for (let index = 0; index < count; index += 1) {
 		result.push(faker.image.urlPicsumPhotos());
 	}
 	return result;
 };
 
-const fakeAssignee = (count: number) => {
-	const result = [];
+const fakeAssignee = (count: number): string[] => {
+	const result: string[] = [];
 	for (let index = 0; index < count; index += 1) {
 		result.push(faker.image.avatarGitHub());
 	}
 	return result;
 };
 
-const fakeTag = (count: number) => {
-	const uniqueArray = [];
-	const set = new Set();
+const fakeTag = (count: number): TaskTag[] => {
+	const uniqueArray: TaskTag[] = [];
+	const set: Set<TaskTag> = new Set();
 
 	while (uniqueArray.length < count) {
 		const randomElement = faker.helpers.enumValue(TaskTag);

@@ -1,4 +1,5 @@
 import { AuthGuard } from "@/components/auth/auth-guard";
+import Footer from "@/components/footer";
 import { LineLoading } from "@/components/loading";
 import { GLOBAL_CONFIG } from "@/global-config";
 import Page403 from "@/pages/sys/error/Page403";
@@ -40,7 +41,7 @@ const Main = () => {
 				className={cn(
 					"flex-auto w-full flex flex-col",
 					"transition-[max-width] duration-300 ease-in-out",
-					"px-4 sm:px-6 py-4 sm:py-6 md:px-8 mx-auto",
+					"px-4 sm:px-6 py-4 sm:py-6 md:px-8 mx-auto pb-16",
 					{
 						"max-w-full": themeStretch,
 						"xl:max-w-screen-xl": !themeStretch,
@@ -55,6 +56,7 @@ const Main = () => {
 					<ScrollRestoration />
 				</Suspense>
 			</main>
+			<Footer />
 		</AuthGuard>
 	);
 };

@@ -16,7 +16,7 @@ import { useNavigate } from "react-router";
 import { toast } from "sonner";
 import { LoginStateEnum, useLoginStateContext } from "./providers/login-provider";
 
-export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRef<"form">) {
+export function LoginForm({ className, ...props }: Readonly<React.ComponentPropsWithoutRef<"form">>) {
 	const { t } = useTranslation();
 	const [loading, setLoading] = useState(false);
 	const [remember, setRemember] = useState(true);
@@ -130,10 +130,7 @@ export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRe
 					</div>
 					<div className="flex cursor-pointer justify-around text-2xl">
 						<Button variant="ghost" size="icon">
-							<Icon icon="mdi:github" size={24} />
-						</Button>
-						<Button variant="ghost" size="icon">
-							<Icon icon="mdi:wechat" size={24} />
+							<Icon icon="logos:apple" size={24} />
 						</Button>
 						<Button variant="ghost" size="icon">
 							<Icon icon="ant-design:google-circle-filled" size={24} />
