@@ -70,7 +70,11 @@
 			"noAccount": "Don't have an account?"
 		},
 		"nav": {
+			"home": "Home",
 			"dashboard": "Dashboard",
+			"standings": "Standings",
+			"weekly": "Weekly",
+			"season": "Season",
 			"pages": "Pages",
 			"others": "Others",
 			"ui": "UI",

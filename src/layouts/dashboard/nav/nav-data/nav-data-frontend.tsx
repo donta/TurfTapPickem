@@ -4,17 +4,27 @@ import { Badge } from "@/ui/badge";
 
 export const frontendNavData: NavProps["data"] = [
 	{
-		name: "sys.nav.dashboard",
+		name: "sys.nav.home",
 		items: [
 			{
-				title: "sys.nav.workbench",
+				title: "sys.nav.dashboard",
+				path: "/workbench",
+				icon: <Icon icon="local:ic-workbench" size="24" />,
+			},
+		],
+	},
+	{
+		name: "sys.nav.standings",
+		items: [
+			{
+				title: "sys.nav.weekly",
 				path: "/workbench",
 				icon: <Icon icon="local:ic-workbench" size="24" />,
 			},
 			{
-				title: "sys.nav.analysis",
-				path: "/analysis",
-				icon: <Icon icon="local:ic-analysis" size="24" />,
+				title: "sys.nav.season",
+				path: "/workbench",
+				icon: <Icon icon="local:ic-workbench" size="24" />,
 			},
 		],
 	},
