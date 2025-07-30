@@ -94,7 +94,8 @@
 		"typescript": "^5.8.3",
 		"vite": "^6.2.0",
 		"vite-tsconfig-paths": "^5.1.2"
-	},"engines": {
+	},
+	"engines": {
 		"node": ">=20.0.0"
 	},
 	"msw": {

@@ -8,7 +8,7 @@ export const getAppVersion = () => {
 export const getBuildInfo = () => {
 	return {
 		version: getAppVersion(),
-		buildDate: import.meta.env.VITE_BUILD_DATE || new Date().toISOString().split('T')[0],
+		buildDate: import.meta.env.VITE_BUILD_DATE || new Date().toISOString().split("T")[0],
 		environment: import.meta.env.MODE,
 		commit: import.meta.env.VITE_GIT_COMMIT || "unknown",
 	};

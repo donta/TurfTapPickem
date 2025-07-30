@@ -34,7 +34,7 @@ export function Footer({ className }: Readonly<FooterProps>) {
 				"fixed bottom-0 left-0 right-0 z-50",
 				"border-t border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60",
 				"px-4 py-2",
-				className
+				className,
 			)}
 		>
 			<div className="container mx-auto flex items-center justify-between">
@@ -62,12 +62,12 @@ export function Footer({ className }: Readonly<FooterProps>) {
 								className="h-8 w-8 p-0"
 								aria-label="Open chat support"
 							>
-								<Icon 
-									icon={isChatOpen ? "mdi:chat-processing" : "mdi:chat-question"} 
-									size={16} 
+								<Icon
+									icon={isChatOpen ? "mdi:chat-processing" : "mdi:chat-question"}
+									size={16}
 									className={cn(
 										"transition-colors",
-										isChatOpen ? "text-primary" : "text-muted-foreground hover:text-foreground"
+										isChatOpen ? "text-primary" : "text-muted-foreground hover:text-foreground",
 									)}
 								/>
 							</Button>
@@ -88,18 +88,11 @@ export function Footer({ className }: Readonly<FooterProps>) {
 					<div className="rounded-lg border border-border bg-background p-4 shadow-lg">
 						<div className="flex items-center justify-between mb-3">
 							<h3 className="font-semibold">Chat Support</h3>
-							<Button
-								variant="ghost"
-								size="sm"
-								onClick={() => setIsChatOpen(false)}
-								className="h-6 w-6 p-0"
-							>
+							<Button variant="ghost" size="sm" onClick={() => setIsChatOpen(false)} className="h-6 w-6 p-0">
 								<Icon icon="mdi:close" size={14} />
 							</Button>
 						</div>
-						<p className="text-sm text-muted-foreground mb-3">
-							How can we help you today?
-						</p>
+						<p className="text-sm text-muted-foreground mb-3">How can we help you today?</p>
 						<div className="flex gap-2">
 							<Button size="sm" variant="outline" onClick={handleChatToggle}>
 								Start Chat
